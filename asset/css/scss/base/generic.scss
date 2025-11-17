@@ -1,0 +1,20 @@
+
+body{
+    background: #fff;
+    color: #000;
+}
+
+a{
+    color: #000;
+    &:hover{
+        opacity: .5;
+    }
+}
+
+img{
+    width: 100%;
+}
+
+@mixin fade{
+    transition: 1s;
+}

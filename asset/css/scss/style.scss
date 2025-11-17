@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/*base*/
+// 全体の土台となるCSSの定義
+@import "base/reset"; // リセットcss
+@import "base/generic"; // ベースとなるcss（body、main、a などの基本スタイル）
+
+/*setting*/
+// プロジェクト全体で使う変数を定義します。
+@import "setting/s-space"; // 幅と間隔に関する変数を定義
+@import "setting/s-grid"; // グリッドシステムに関する変数を定義
+@import "setting/s-media-queries"; // メディアクエリに関する変数を定義
+@import "setting/s-font"; // フォントに関する変数を定義
+@import "setting/s-color"; // カラーに関する変数を定義
+
+/*tool*/
+// プロジェクト全体で使うアニメーション、mixin、関数を定義
+@import "tool/keyframes"; // アニメーション管理
+@import "tool/mixin-module"; // settingフォルダ以外のmixin管理
+
+/*layout*/
+// ヘッダーやフッター、メインコンテンツのレイアウトや装飾などを設定します。
+@import "layout/l-header"; // ヘッダーのレイアウト・装飾用
+@import "layout/l-footer"; // フッターのレイアウト・装飾用
+@import "layout/l-main"; // 共通で使うレイアウト・装飾用
+@import "layout/l-top-grid"; // TOPページのレイアウト用
+// @import "layout/l-sub-grid"; // サブカテゴリページのレイアウト用
+
+/*module*/
+// サイトを構成するパーツ（ボタン、見出し、リストなど）の設定をします。
+@import "module/button"; // ボタンモジュール
+@import "module/list"; // リストモジュール
+@import "module/hedding"; // 見出しモジュール
+@import "module/img"; // 画像モジュール
+@import "module/other"; // その他装飾モジュール
+
+/*theme*/
+// ページの一部の見た目を変えたり、あるテーマに沿ってWEBページ全体の見た目を変える際に使用します。
+@import "theme/t-top-utility"; // TOPページの装飾用
+// @import "theme/t-sub-utility"; // サブカテゴリページの装飾用
+
+
+
+
