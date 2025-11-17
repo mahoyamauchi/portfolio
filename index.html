@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+
+    <!-- 文字のエンコード 日本語 -->
+    <meta charset="utf-8">
+    <!-- IE互換モード（ユーザー設定により古いIEと同じように表示され崩れるのを防ぐ） -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- レスポンシブ -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+    <!-- タイトル/ディスクリプション -->
+    <title>山内満帆サイト</title>
+    <meta name="description" content="ページの内容を表す文章">
+  
+    <!-- favicon -->
+    <link rel="icon" href="favicon.ico">
+    <!-- スマホアイコン 150×150px -->
+    <link rel="apple-touch-icon" href="webclip.png">
+  
+    <!-- OGPタグ -->
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:url" content="ページのURL">
+    <meta property="og:site_name" content="サイト名">
+    <meta property="og:title" content="ページのタイトル">
+    <meta property="og:type" content="website"><!-- TOP：website / 中ページ：article -->
+    <meta property="og:description" content="記事の抜粋">
+    <meta property="og:image" content="画像のURL">
+  
+    <!-- twitterカード -->
+    <meta name="twitter:site" content="@Twitterユーザー名">
+    <meta name="twitter:title" content="記事のタイトル">
+    <meta name="twitter:description" content="記事の概要">
+    <meta name="twitter:image" content="カードに表示する画像のURL">
+    <meta name="twitter:card" content="summary">
+    <!-- ■画像小(正方形)：summary
+          サイズ 144x144〜4096x4096px
+          形式 JPG/PNG/WEBP/GIF
+         ■画像大：summary_large_image
+          サイズ 300x157〜4096x4096px（比率2：1）
+          形式 JPG/PNG/WEBP/GIF
+         ■アプリアイコン：app / ■動画：player -->
+    <meta name="twitter:player" content="動画のURL">
+    <meta name="twitter:player:width" content="動画の横幅">
+    <meta name="twitter:player:height" content="動画の高さ">
+  
+    <!-- style -->
+    <link rel="stylesheet" href="asset/css/style.css">
+  
+    <script src="asset/js/jquery-3.6.1.min.js" charset="UTF-8" async></script>
+    <!-- ■default(記述不要)
+          HTMLのDLを中断して、JSのDLと実行。
+         ■async
+          HTMLと同時進行でJSもDL、HTML中断後JS実行。
+         ■defer
+          HTMLと同時進行でJSもDL、HTMLのDL完了後JS実行。 -->
+
+
+    <!-- noindex -->
+    <meta name="robots" content="noindex,nofollow">
+  
+  </head>
+  
+  
+  <body>
+    <!-- インクルード -->
+    <!-- @include("/include/body-start.html") -->
+
+    <div class="Allwrap">
+
+      <!-- ヘッダー -->
+      <header>
+        <div class="Header">
+          <div class="Header__Wrap">
+            <nav class="Header__Wrap__Nav">
+              <div class="Header__Wrap__Nav__Flex -flex">
+                <a class="-link" href="/">TOP</a>
+                <a class="-link" href="/table/index.html">表</a>
+                <a class="-link -instagram" href="">Instagram</a>
+              </div>
+            </nav>
+            <div class="BtnClose">
+              <img class="-img" src="asset/img/logo.jpg" alt="コンテンツを閉じる">
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="cover-body"></div>
+      <div class="BtnOpen">
+        <img class="-img" src="asset/img/logo.jpg" alt="コンテンツを開く">
+      </div>
+      <div class="Header__Logo">
+        <a class="-btn" href="/">
+          <img class="-img" src="asset/img/logo.jpg" alt="ロゴイメージ">
+        </a>
+      </div>
+      
+    
+      <main>
+        <div class="">
+    
+          <section class="Title">
+            <h1>マホのサイト</h1>
+          </section>
+    
+          <section class="Idea">
+            <h2>アイデア集</h2>
+            <a class="-btn" href="table/index.html">表</a>
+          </section>
+    
+    
+        </div>
+      </main>
+    
+      <footer></footer>
+
+    </div><!-- /Allwrap -->
+
+
+    <!--   Nav用class付与   --> 
+    <script>
+      $(function(){
+        $(".BtnOpen,.BtnClose,.cover-body").on("click", function() {
+          // openが存在する場合
+          if ($(".Allwrap").hasClass('open')) {	
+            // openを削除
+            $(".Allwrap").removeClass('open');				
+          }
+          else {
+            // openを追加
+            $(".Allwrap").addClass('open');
+          }			
+        });
+      });
+    </script>
+    <!--   Nav用class付与   -->
+    
+    <!--   Nav用スクロール無効設定   --> 
+    <script>
+      $(function(){
+          $(".BtnOpen,.BtnClose,.cover-body").on('click', function(event){
+              event.preventDefault();
+              $(".BtnOpen,.BtnClose,.cover-body").toggleClass('active');
+              
+              if($(".BtnOpen,.BtnClose,.cover-body").hasClass('active')) {
+                  $('html').css('overflow', 'hidden');
+              } else {
+                  $('html').removeAttr('style');
+              }
+          });
+      });
+    </script>
+    <!--   Nav用スクロール無効設定   --> 
+  
+  </body>
+
+
+
+
+</html>
