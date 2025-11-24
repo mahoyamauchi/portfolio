@@ -63,96 +63,77 @@
   </head>
   
   
-  <body>
+  <body class="top">
     <!-- インクルード -->
-    <!-- @include("/include/body-start.html") -->
+    <!-- @include("/include/body-start.php") -->
 
-    <div class="Allwrap">
+    <div class="allwrap">
 
       <!-- ヘッダー -->
       <header>
-        <div class="Header">
-          <div class="Header__Wrap">
-            <nav class="Header__Wrap__Nav">
-              <div class="Header__Wrap__Nav__Flex -flex">
-                <a class="-link" href="/">TOP</a>
-                <a class="-link" href="/table/index.html">表</a>
-                <a class="-link -instagram" href="">Instagram</a>
-              </div>
-            </nav>
-            <div class="BtnClose">
-              <img class="-img" src="asset/img/logo.jpg" alt="コンテンツを閉じる">
-            </div>
-          </div>
-        </div>
+        
       </header>
-      <div class="cover-body"></div>
-      <div class="BtnOpen">
-        <img class="-img" src="asset/img/logo.jpg" alt="コンテンツを開く">
-      </div>
-      <div class="Header__Logo">
-        <a class="-btn" href="/">
-          <img class="-img" src="asset/img/logo.jpg" alt="ロゴイメージ">
-        </a>
-      </div>
       
-    
+
+      <!-- メインコンテンツ -->
       <main>
-        <div class="">
+        <div>
     
-          <section class="Title">
-            <h1>マホのサイト</h1>
+          <section class="l-main">
+            <h1 class="">マホのサイト</h1>
           </section>
     
-          <section class="Idea">
-            <h2>アイデア集</h2>
-            <a class="-btn" href="table/index.html">表</a>
-            <p class="">あああああああ</p>
+          <section class="l-achievements">
+            <div class="l-contener">
+              <div class="l-content">
+                <h2 class="t-achievements__title">WORK</h2>
+                <p class="t-achievements__text">テストテストテストテスト<br>テストテストテストテストテストテスト</p>
+                <div class="t-achievements__group">
+                  <a class="t-achievements__item" href="achievements/detail01.php">
+                    <div class="t-achievements__item-image">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="asset/img/logo.jpg">
+                        <img class="img" src="asset/img/logo.jpg" alt="">
+                      </picture>
+                    </div>
+                    <p class="t-achievements__item-ttl">健生グループ</p>
+                    <p class="t-achievements__item-text">保育園サイトを新規構築</p>
+                  </a>
+                  <a class="t-achievements__item" href="achievements/detail02.php">
+                    <div class="t-achievements__item-image">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="asset/img/logo.jpg">
+                        <img class="img" src="asset/img/logo.jpg" alt="">
+                      </picture>
+                    </div>
+                    <p class="t-achievements__item-ttl">マイ記念日フォトギャラリー</p>
+                    <p class="t-achievements__item-text">テストテストテストテスト</p>
+                  </a>
+                  <a class="t-achievements__item" href="achievements/detail03.php">
+                    <div class="t-achievements__item-image">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="asset/img/logo.jpg">
+                        <img class="img" src="asset/img/logo.jpg" alt="">
+                      </picture>
+                    </div>
+                    <p class="t-achievements__item-ttl">MECT2025</p>
+                    <p class="t-achievements__item-text">テストテストテストテスト</p>
+                  </a>
+                </div>
+              </div>
+            </div>
           </section>
     
     
         </div>
       </main>
     
-      <footer></footer>
+      <?php include_once 'footer.php'; ?>
 
-    </div><!-- /Allwrap -->
+    </div><!-- /allwrap -->
 
 
-    <!--   Nav用class付与   --> 
-    <script>
-      $(function(){
-        $(".BtnOpen,.BtnClose,.cover-body").on("click", function() {
-          // openが存在する場合
-          if ($(".Allwrap").hasClass('open')) {	
-            // openを削除
-            $(".Allwrap").removeClass('open');				
-          }
-          else {
-            // openを追加
-            $(".Allwrap").addClass('open');
-          }			
-        });
-      });
-    </script>
-    <!--   Nav用class付与   -->
-    
-    <!--   Nav用スクロール無効設定   --> 
-    <script>
-      $(function(){
-          $(".BtnOpen,.BtnClose,.cover-body").on('click', function(event){
-              event.preventDefault();
-              $(".BtnOpen,.BtnClose,.cover-body").toggleClass('active');
-              
-              if($(".BtnOpen,.BtnClose,.cover-body").hasClass('active')) {
-                  $('html').css('overflow', 'hidden');
-              } else {
-                  $('html').removeAttr('style');
-              }
-          });
-      });
-    </script>
-    <!--   Nav用スクロール無効設定   --> 
+
   
   </body>
 
