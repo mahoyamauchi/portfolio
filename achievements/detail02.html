@@ -46,12 +46,16 @@
     <meta name="twitter:player:height" content="動画の高さ">
   
     <!-- head -->
-    <div id="head"></div>
-    <script>
-      fetch("../include/head.html")
-        .then(res => res.text())
-        .then(html => { document.getElementById("head").innerHTML = html; });
-    </script>
+      <!--   css  --> 
+  <link href="../asset/css/style.css" rel="stylesheet">
+
+  <!--   font   -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- sp_touchstart -->
+  <script>document.addEventListener('touchstart',function(){});</script>
 
     <!-- js -->
     <script src="../asset/js/jquery-3.6.1.min.js" charset="UTF-8" async></script>
