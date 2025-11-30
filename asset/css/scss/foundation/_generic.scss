@@ -1,0 +1,42 @@
+@charset "UTF-8";
+@import "font";
+@import "grid";
+
+
+html {
+	font-size: 62.5%;
+}
+
+body{
+	@include noto-sans;
+    color: #FF7C2D;
+    line-height: 1.5;
+	background: #FFF8F3;
+}
+
+a{
+	display: block;
+	cursor: pointer;
+	transition: .5s;
+	text-decoration: none;
+	color: #FF7C2D;
+	&:hover{
+		@include mq-min(sm) {
+			opacity: .5;
+		}
+	}
+}
+
+img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+li{
+	list-style: none;
+}
+
+@mixin fade{
+	transition: 1s;
+}

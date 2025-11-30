@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+// ==========================================================================
+// c-hedding
+// ==========================================================================
+
+// --------------------------
+// コンテンツタイトル
+// --------------------------
+
+.c-title{
+    @include en;
+    font-size: 4.5rem;
+    color: #FF7C2D;
+    font-weight: bold;
+    text-align: center;
+    @include mq-min(sm) {
+        font-size: 6.5rem;
+    }
+}
+
+.c-text{
+    font-size: 1.4rem;
+    color: #FF7C2D;
+    text-align: center;
+    @include mq-min(sm) {
+        font-size: 1.6rem;
+    }
+}

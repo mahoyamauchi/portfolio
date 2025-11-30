@@ -1,0 +1,20 @@
+@charset "UTF-8";
+// ==========================================================================
+// button
+// ==========================================================================
+
+// --------------------------
+// 戻る
+// --------------------------
+.c-back_link{
+    font-size: 1.4rem;
+    color: #217474;
+    text-align: center;
+    border-bottom: .1rem solid #217474;
+    padding: 0 1rem 0 1.2rem;
+    width: fit-content;
+    margin: 0 auto;
+    @include mq-min(sm) {
+        font-size: 1.6rem;
+    }
+}

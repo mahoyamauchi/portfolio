@@ -45,9 +45,15 @@
     <meta name="twitter:player:width" content="動画の横幅">
     <meta name="twitter:player:height" content="動画の高さ">
   
-    <!-- style -->
-    <link rel="stylesheet" href="asset/css/style.css">
-  
+    <!-- head -->
+    <div id="head"></div>
+    <script>
+      fetch("include/head.html")
+        .then(res => res.text())
+        .then(html => { document.getElementById("head").innerHTML = html; });
+    </script>
+
+    <!-- js -->
     <script src="asset/js/jquery-3.6.1.min.js" charset="UTF-8" async></script>
     <!-- ■default(記述不要)
           HTMLのDLを中断して、JSのDLと実行。
@@ -64,9 +70,6 @@
   
   
   <body class="top">
-    <!-- インクルード -->
-    <!-- @include("/include/body-start.php") -->
-
     <div class="allwrap">
 
       <!-- ヘッダー -->
@@ -78,47 +81,157 @@
       <!-- メインコンテンツ -->
       <main>
         <div>
-    
-          <section class="l-main">
-            <h1 class="">マホのサイト</h1>
+
+          <!-- メインビジュアル -->
+          <section class="l-mainvisual">
+            <div class="p-mainvisual__wrap">
+              <div class="p-mainvisual__wrap-sentence">
+                <h1 class="title">MAHO YAMAUCHI<br>PORTFOLIO SITE</h1>
+                <p class="text">WEB制作を基点に、解析・改善提案を通して<br>サービス向上を目指します。</p>
+              </div>
+              <div class="p-mainvisual__wrap-image f-pukaAnime">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="asset/img/top/mainvisual.png">
+                  <img class="img" src="asset/img/top/mainvisual.png" alt="">
+                </picture>
+              </div>
+            </div>
+          </section>
+
+          <section class="l-skill">
+            <div class="l-contener">
+              <div class="l-content">
+                <h2 class="p-skill__title c-title">MY SKILL</h2>
+                <ul class="p-skill__item">
+                  <li class="p-skill__item-list">
+                    <div class="u-img">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="asset/img/top/skill01.png">
+                        <img class="img" src="asset/img/top/skill01_sp.png" alt="コーディングのイメージ">
+                      </picture>
+                    </div>
+                    <p class="u-title">コーディング</p>
+                    <p class="u-text">デザインの意図を汲み取り、最適なアニメーションや効果を組み合わせて構築します。レスポンシブ対応はもちろん、WordPressを用いた更新しやすいサイトまで、目的に合わせて柔軟に制作します。</p>
+                  </li>
+                  <li class="p-skill__item-list">
+                    <div class="u-img">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="asset/img/top/skill02.png">
+                        <img class="img" src="asset/img/top/skill02_sp.png" alt="解析・改善提案のイメージ">
+                      </picture>
+                    </div>
+                    <p class="u-title">解析・改善提案</p>
+                    <p class="u-text">GA4やサーチコンソールなどを使用して、データを分析し課題を発見。成果最大化に向けて、数字に基づいた改善施策をご提案します。</p>
+                  </li>
+                  <li class="p-skill__item-list">
+                    <div class="u-img">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="asset/img/top/skill03.png">
+                        <img class="img" src="asset/img/top/skill03_sp.png" alt="情報設計のイメージ">
+                      </picture>
+                    </div>
+                    <p class="u-title">情報設計・ワイヤー</p>
+                    <p class="u-text">SEOを軸に、UI/UXも考慮した情報設計を行います。ユーザーにとってわかりやすく、ブランド価値を高めるサイトの土台づくりをします。</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </section>
     
           <section class="l-achievements">
             <div class="l-contener">
               <div class="l-content">
-                <h2 class="t-achievements__title">WORK</h2>
-                <p class="t-achievements__text">テストテストテストテスト<br>テストテストテストテストテストテスト</p>
-                <div class="t-achievements__group">
-                  <a class="t-achievements__item" href="achievements/detail01.php">
-                    <div class="t-achievements__item-image">
+                <h2 class="p-achievements__title c-title">WORKS</h2>
+                <p class="p-achievements__text c-text">過去３年間の実績を、一部ご紹介いたします。</p>
+                <div class="p-achievements__group">
+                  <a class="p-achievements__item f-scale" href="achievements/detail01.html">
+                    <div class="p-achievements__item-image">
                       <picture>
-                        <source media="(min-width: 768px)" srcset="asset/img/logo.jpg">
-                        <img class="img" src="asset/img/logo.jpg" alt="">
+                        <source media="(min-width: 768px)" srcset="asset/img/top/work01.png">
+                        <img class="img" src="asset/img/top/work01.png" alt="保育園サイト">
                       </picture>
                     </div>
-                    <p class="t-achievements__item-ttl">健生グループ</p>
-                    <p class="t-achievements__item-text">保育園サイトを新規構築</p>
+                    <p class="p-achievements__item-ttl">保育園グループサイトの構築</p>
+                    <p class="p-achievements__item-text">有限会社健生メディカルコーポレーション様</p>
                   </a>
-                  <a class="t-achievements__item" href="achievements/detail02.php">
-                    <div class="t-achievements__item-image">
+                  <a class="p-achievements__item f-scale" href="achievements/detail02.html">
+                    <div class="p-achievements__item-image">
                       <picture>
-                        <source media="(min-width: 768px)" srcset="asset/img/logo.jpg">
-                        <img class="img" src="asset/img/logo.jpg" alt="">
+                        <source media="(min-width: 768px)" srcset="asset/img/top/work02.png">
+                        <img class="img" src="asset/img/top/work02.png" alt="商品LP">
                       </picture>
                     </div>
-                    <p class="t-achievements__item-ttl">マイ記念日フォトギャラリー</p>
-                    <p class="t-achievements__item-text">テストテストテストテスト</p>
+                    <p class="p-achievements__item-ttl">商品LPの構築</p>
+                    <p class="p-achievements__item-text">株式会社浜乙女様</p>
                   </a>
-                  <a class="t-achievements__item" href="achievements/detail03.php">
-                    <div class="t-achievements__item-image">
+                  <a class="p-achievements__item f-scale" href="achievements/detail03.html">
+                    <div class="p-achievements__item-image">
                       <picture>
-                        <source media="(min-width: 768px)" srcset="asset/img/logo.jpg">
-                        <img class="img" src="asset/img/logo.jpg" alt="">
+                        <source media="(min-width: 768px)" srcset="asset/img/top/work03.png">
+                        <img class="img" src="asset/img/top/work03.png" alt="">
                       </picture>
                     </div>
-                    <p class="t-achievements__item-ttl">MECT2025</p>
-                    <p class="t-achievements__item-text">テストテストテストテスト</p>
+                    <p class="p-achievements__item-ttl">改善提案・ワイヤー作成
+                    </p>
+                    <p class="p-achievements__item-text">株式会社イビケン様</p>
                   </a>
+                  <a class="p-achievements__item f-scale" href="achievements/detail04.html">
+                    <div class="p-achievements__item-image">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="asset/img/top/work04.png">
+                        <img class="img" src="asset/img/top/work04.png" alt="">
+                      </picture>
+                    </div>
+                    <p class="p-achievements__item-ttl">サイト解析・改善提案</p>
+                    <p class="p-achievements__item-text">株式会社タカハラコーポレーション様</p>
+                  </a>
+
+                  <a class="p-achievements__item f-scale" href="achievements/detail06.html">
+                    <div class="p-achievements__item-image">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="asset/img/top/work06.png">
+                        <img class="img" src="asset/img/top/work06.png" alt="">
+                      </picture>
+                    </div>
+                    <p class="p-achievements__item-ttl">ECサイトの改善提案・ワイヤー作成</p>
+                    <p class="p-achievements__item-text">景品キング</p>
+                  </a>
+
+                  <a class="p-achievements__item f-scale" href="achievements/detail05.html">
+                    <div class="p-achievements__item-image">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="asset/img/top/work05.png">
+                        <img class="img" src="asset/img/top/work05.png" alt="">
+                      </picture>
+                    </div>
+                    <p class="p-achievements__item-ttl">撮影・衣裳レンタルサイトの構築</p>
+                    <p class="p-achievements__item-text">総合貸衣裳館Mai</p>
+                  </a>
+                  
+                  <a class="p-achievements__item f-scale" href="achievements/detail07.html">
+                    <div class="p-achievements__item-image">
+                      <picture>
+                        <source media="(min-width: 768px)" srcset="asset/img/top/work07.png">
+                        <img class="img" src="asset/img/top/work07.png" alt="">
+                      </picture>
+                    </div>
+                    <p class="p-achievements__item-ttl">工作機械展サイトの構築</p>
+                    <p class="p-achievements__item-text">MECT2025</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="l-about">
+            <div class="l-contener">
+              <div class="l-content">
+                <h2 class="p-about__title c-title">ABOUT</h2>
+                <p class="p-about__text c-text">名古屋学芸大学デザイン学科卒業。<br>学生時代はグラフィックデザインを学び、<br>現在は名古屋のデザイン会社にてWEBチームに所属しています。</p>
+                <div class="p-about__img">
+                  <picture>
+                    <img class="img" src="asset/img/top/about.png" alt="猫と満帆">
+                  </picture>
                 </div>
               </div>
             </div>
@@ -127,12 +240,34 @@
     
         </div>
       </main>
-    
-      <?php include_once 'footer.php'; ?>
+
+      <!-- フッター -->
+      <div id="footer"></div>
+      <script>
+        fetch("include/footer.html")
+          .then(res => res.text())
+          .then(html => { document.getElementById("footer").innerHTML = html; });
+      </script>
 
     </div><!-- /allwrap -->
 
 
+    <!-- JavaScript -->
+
+    <script>
+      const targets = document.querySelectorAll('.f-scale');
+
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  entry.target.classList.add('is-active');
+                  observer.unobserve(entry.target);
+              }
+          });
+      }, { threshold: 0.1 });
+
+      targets.forEach(target => observer.observe(target));
+    </script>
 
   
   </body>

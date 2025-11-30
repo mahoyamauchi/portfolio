@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+
+/*----------------------------------
+
+ START keyframes.scss
+
+----------------------------------*/
+
+// hover時等、徐々に切り替わるアニメーション
+@mixin fade {
+	-webkit-tap-highlight-color: rgba(0,0,0,0.25);	
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-ms-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+
+
+// ぷかぷか浮かんでいるアニメーション
+.f-pukaAnime{
+	animation : pukaAnime 1.5s infinite;
+}
+
+@keyframes pukaAnime{
+  0%{
+    transform:translateY(0px);
+  }
+  50%{
+    transform:translateY(-10px);
+  }
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+
+// 大小するアニメーション
+.f-purupuru {
+  animation: purupuru 6.5s 5s infinite ease-out;
+  opacity: 1;
+}
+
+@keyframes purupuru {
+  0% {
+    transform: scale(1, 1);
+  }
+  5% {
+    transform: scale(1.1, 1.1);
+  }
+  10% {
+    transform: scale(1, 1);
+  }
+  15% {
+    transform: scale(1.1, 1.1);
+  }
+  20% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+
+// 透明度が変わるアニメーション
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+// 中心から広がるアニメーション
+.f-scale {
+  opacity: 0; transform: scale(0.5); /* 真ん中から小さくスタート */
+  transform-origin: center center; /* 中心を基準に拡大 */ 
+  transition: all 0.6s ease-out;
+}
+.f-scale.is-active {
+  opacity: 1; transform: scale(1); /* 元のサイズまで拡大 */
+}
+
+
+
+// 下から浮かび上がる動き
+.f-fadeUp {
+  transition: 0.8s ease-in-out;
+  transform: translateY(30px);
+  opacity: 0;
+}
+// 左右からスライドインする動き
+.f-slideIn{
+  transition: .7s ease-in-out;
+  opacity: 0;
+}
+.f-slide_right{
+  transform: translateX(-200px);
+}
+.f-slide_left{
+  transform: translateX(200px);
+}
+// 定位置に戻る
+.on{
+  transform: translateX(0);
+  opacity: 1.0;
+}
+
+
+/*----------------------------------
+
+ END keyframes.scss
+
+----------------------------------*/
+

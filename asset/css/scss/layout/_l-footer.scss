@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+// ==========================================================================
+// l-footer
+// ==========================================================================
+
+
+// --------------------------
+// フッター
+// --------------------------
+.l-footer{
+  background: #FF7C2D;
+  padding: 2rem 1rem 1rem;
+  @include mq-min(sm) {
+    padding: 3rem 2rem 2rem;
+  }
+  &__title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 1rem;
+    padding: 0 2rem;
+    @include mq-min(sm) {
+      font-size: 2.4rem;
+      padding: 0;
+      max-width: 100rem;
+      margin: 0 auto 1rem;
+    }
+  }
+  &__item{
+    @include flexbox();
+    @include flex-wrap(wrap);
+    justify-content: flex-start;
+    padding: 0 2rem 2rem;
+    row-gap: .5rem;
+    column-gap: 3rem;
+    @include mq-min(sm) {
+      padding: 0 0 3rem;
+      max-width: 100rem;
+      margin: 0 auto;
+    }
+    &-list{
+      width: fit-content;
+      .link{
+        width: fit-content;
+        color: #fff;
+        font-size: 1.2rem;
+        position: relative;
+        padding-left: 1.2rem;
+        &::before{
+          content: ">";
+          position: absolute;
+          left: 0;
+          top: -.2rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  &__copyright{
+    border-top: .1rem solid #fff;
+    padding-top: 1rem;
+    @include mq-min(sm) {
+      padding-top: 2rem;
+    }
+    &-text{
+      font-size: 1rem;
+      color: #fff;
+      text-align: center;
+      @include mq-min(sm) {}
+    }
+  }
+}

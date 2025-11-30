@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+// ==========================================================================
+// t-detail-utility
+// ==========================================================================
+
+
+// --------------------------
+// 共通
+// --------------------------
+.achievements-detail{
+	background: #fff;
+
+	// タイトル
+	.p-title{}
+
+	// 導入
+	.p-intro{
+		&__flex{
+			@include flexbox();
+			@include flex-wrap(wrap);
+			@include justify-content(space-between);
+			@include align-items(center);
+			row-gap: 2rem;
+			@include mq-min(sm) {
+				row-gap: 0;
+				column-gap: 10rem;
+			}
+		}
+		&__image{
+			flex-basis: 100%;
+			overflow: hidden;
+			@include mq-min(sm) {
+				flex-basis: 35%;
+			}
+			.img{
+				width: 75%;
+				margin: 0 auto;
+				@include mq-min(sm) {
+					width: 100%;
+				}
+			}
+		}
+		&__sentence{
+			flex-basis: 100%;
+			@include mq-min(sm) {
+				flex: 1;
+			}
+			&-title{
+				font-size: 2.4rem;
+				font-weight: bold;
+				color: #217474;
+				margin-bottom: 2rem;
+				@include mq-min(sm) {
+					font-size: 2.8rem;
+				}
+			}
+			&-time,
+			&-part,
+			&-tool,
+			&-responsive{
+				font-size: 1.2rem;
+				color: #217474;
+			}
+			&-responsive{
+				margin-bottom: 2rem;
+			}
+			&-text{
+				font-size: 1.6rem;
+				color: #217474;
+				margin-bottom: 4rem;
+				@include mq-min(sm) {
+					margin-bottom: 2rem;
+				}
+			}
+		}
+		&__button{
+			font-size: 1.4rem;
+			text-align: center;
+			color: #fff;
+			background: #217474;
+			border: .1rem solid #217474;
+			padding: 0.7rem 1.5rem 0.7rem .5rem;
+			border-radius: 999999rem;
+			width: 100%;
+			max-width: 15rem;
+			position: relative;
+			margin: 3rem auto 0;
+			@include mq-min(sm) {
+				font-size: 1.6rem;
+				max-width: 17rem;
+				margin: 0 auto 0 0;
+			}
+			&::after{
+				content: "";
+				background: url(/asset/img/common/icon-link.svg)no-repeat;
+				background-size: contain;
+				background-position: center;
+				position: absolute;
+				top: 52%;
+				right: 1.5rem;
+				transform: translateY(-50%);
+				width: 2rem;
+				height: 2rem;
+				@include mq-min(sm) {
+					top: 54%;
+					right: 1.8rem;
+				}
+			}
+			&:hover{
+				opacity: 1;
+				color: #217474;
+				background: #fff;
+				&::after{
+					content: "";
+					background: url(/asset/img/common/icon-link-orange.svg)no-repeat;
+					background-size: contain;
+					background-position: center;
+				}
+			}
+		}
+	}
+
+	// 説明
+	.p-explain{
+		&__title{
+			font-size: 2.6rem;
+			font-weight: bold;
+			color: #217474;
+			text-align: center;
+			margin-bottom: 1rem;
+			@include mq-min(sm) {
+				font-size: 3.8rem;
+				margin-bottom: 2rem;
+			}
+		}
+		&__image{
+			border: .1rem solid #000;
+			max-width: 60rem;
+			margin: 0 auto;
+		}
+	}
+
+}

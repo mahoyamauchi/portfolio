@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+
+/*----------------------------------
+
+ START l-mixin
+
+----------------------------------*/
+
+// ====================================
+//  トランスフォームで揃える
+// ====================================
+//　X軸：中央　　Y軸：中央（ど真ん中）
+@mixin center {
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+//　X軸：中央　　Y軸：0
+@mixin x0 {
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+}
+//　X軸：0　　Y軸：中央
+@mixin y0 {
+  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+}
+//　X軸：0　　Y軸：0
+@mixin xy0 {
+  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+}
+
+// ====================================
+//  影
+// ====================================
+@mixin shadow {
+  box-shadow: 0 3px 15px #00000029;
+}
+
+// ====================================
+//  〇行以上は...で省略
+// ====================================
+@mixin omit($number) {
+  display: -webkit-box;
+  -webkit-line-clamp: $number;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/*----------------------------------
+
+ END mixin.scss
+
+----------------------------------*/
+

@@ -1,43 +1,53 @@
 @charset "utf-8";
 
-/*base*/
+/*foundation*/
 // 全体の土台となるCSSの定義
-@import "base/reset"; // リセットcss
-@import "base/generic"; // ベースとなるcss（body、main、a などの基本スタイル）
+@import "foundation/reset"; // リセットcss
+@import "foundation/generic"; // ベースとなるcss（body、main、a などの基本スタイル）
+@import "foundation/font"; // ベースとなるcss（fontの基本スタイル）
+@import "foundation/animation"; // 共通のアニメーション
+@import "foundation/mixin"; // 共通のmixin
+@import "foundation/grid"; // flexとカラムの基本スタイル
 
 /*setting*/
 // プロジェクト全体で使う変数を定義します。
-@import "setting/s-space"; // 幅と間隔に関する変数を定義
-@import "setting/s-grid"; // グリッドシステムに関する変数を定義
-@import "setting/s-media-queries"; // メディアクエリに関する変数を定義
-@import "setting/s-font"; // フォントに関する変数を定義
-@import "setting/s-color"; // カラーに関する変数を定義
+// @import "setting/s-space"; // 幅と間隔に関する変数を定義
+// @import "setting/s-grid"; // グリッドシステムに関する変数を定義
+// @import "setting/s-media-queries"; // メディアクエリに関する変数を定義
+// @import "setting/s-font"; // フォントに関する変数を定義
+// @import "setting/s-color"; // カラーに関する変数を定義
 
 /*tool*/
 // プロジェクト全体で使うアニメーション、mixin、関数を定義
-@import "tool/keyframes"; // アニメーション管理
-@import "tool/mixin-module"; // settingフォルダ以外のmixin管理
+// @import "tool/keyframes"; // アニメーション管理
+// @import "tool/mixin-module"; // settingフォルダ以外のmixin管理
 
 /*layout*/
-// ヘッダーやフッター、メインコンテンツのレイアウトや装飾などを設定します。
+// ヘッダーやフッター、メインコンテンツの大きな枠組み・レイアウトや装飾などを設定します。
 @import "layout/l-header"; // ヘッダーのレイアウト・装飾用
 @import "layout/l-footer"; // フッターのレイアウト・装飾用
-@import "layout/l-main"; // 共通で使うレイアウト・装飾用
-@import "layout/l-top-grid"; // TOPページのレイアウト用
-// @import "layout/l-sub-grid"; // サブカテゴリページのレイアウト用
+@import "layout/l-main"; // 共通で使うレイアウト用
+@import "layout/l-top-grid"; // TOPページの大枠レイアウト用
+@import "layout/l-detail-grid"; // 実績詳細ページのレイアウト用
 
-/*module*/
+/*object-component*/
 // サイトを構成するパーツ（ボタン、見出し、リストなど）の設定をします。
-@import "module/button"; // ボタンモジュール
-@import "module/list"; // リストモジュール
-@import "module/hedding"; // 見出しモジュール
-@import "module/img"; // 画像モジュール
-@import "module/other"; // その他装飾モジュール
+@import "object/component/button"; // ボタンモジュール
+@import "object/component/list"; // リストモジュール
+@import "object/component/hedding"; // 見出しモジュール
+@import "object/component/img"; // 画像モジュール
+@import "object/component/breadcrumb"; // パンくずモジュール
+@import "object/component/other"; // その他装飾モジュール
 
-/*theme*/
+/*object-project*/
 // ページの一部の見た目を変えたり、あるテーマに沿ってWEBページ全体の見た目を変える際に使用します。
-@import "theme/t-top-utility"; // TOPページの装飾用
-// @import "theme/t-sub-utility"; // サブカテゴリページの装飾用
+@import "object/project/p-top-project"; // TOPページ専用パーツのレイアウト
+@import "object/project/p-detail-project"; // 実績詳細ページ専用パーツのレイアウト
+
+/*object-utility*/
+// ページの一部の見た目を変えたり、あるテーマに沿ってWEBページ全体の見た目を変える際に使用します。
+@import "object/utility/u-top-utility"; // TOPページの装飾用
+@import "object/utility/u-detail-utility"; // 実績詳細ページの装飾用
 
 
 

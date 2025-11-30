@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+// ==========================================================================
+// t-top-utility
+// ==========================================================================
+.top{
+
+	// --------------------------
+	// スキル
+	// --------------------------
+	.p-skill{
+		&__item{
+			&-list{
+                &:first-child{
+					.u-img{
+                        width: 65%;
+                        margin: 0 auto;
+                        @include mq-min(sm) {
+                            width: 100%;
+                        }
+                    }
+                    .u-title{
+                        margin-top: -1rem;
+                        @include mq-min(sm) {
+                            margin-top: 0;
+                        }
+                    }
+				}
+                .u-title{
+                    text-align: center;
+                    font-size: 1.8rem;
+                    font-weight: bold;
+                    margin-bottom: .5rem;
+                    @include mq-min(sm) {
+                        font-size: 2rem;
+                    }
+                }
+                .u-text{
+                    font-size: 1.4rem;
+                    text-align: justify;
+                    @include mq-min(sm) {
+                        font-size: 1.6rem;
+                    }
+                }
+				
+			}
+		}
+	}
+    .u-title{
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+    .u-text{
+        font-size: 1.4rem;
+    }
+}

@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+// ==========================================================================
+// c-breadcrumb
+// ==========================================================================
+
+
+// --------------------------
+// パンくず
+// --------------------------
+.c-breadcrumb{
+  margin: 0 0 2rem 1.5rem;
+  &__list{
+    @include flexbox();
+    justify-content: flex-start;
+    @include align-items(center);
+    li{
+      &:not(:last-child){
+        margin-right: 2rem;
+        position: relative;
+        &::after{
+          content: ">";
+          position: absolute;
+          right: -1.5rem;
+          top: -0.25rem;
+          font-size: 1.5rem;
+          color: #217474;
+        }
+      }
+      width: fit-content;
+      a{
+        width: fit-content;
+        font-size: 1.1rem;
+        text-decoration: underline;
+        color: #217474;
+      }
+      span{
+        color: #217474;
+      }
+    }
+  }
+}

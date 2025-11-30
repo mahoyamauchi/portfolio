@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+// ==========================================================================
+// Other
+// ==========================================================================
+
+.c-flex{
+    display: flex;
+    display: -webkit-flex; //Chrome,Android2.3~など
+    display: -webkit-box;  //iOS6以下,Safari3.1-6
+    display: -moz-box; //Firefox19以下
+    display: -ms-flexbox; //IE9~用
+}
+
+
+@mixin row-reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+@mixin column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+@mixin column-reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+}
+
+
+// --------------------------
+// 改行
+// --------------------------
+.c-br-pc{
+    display: none;
+    @include mq-min(sm) {
+        display: inline;
+    }
+}
+.c-br-sp{
+    display: inline;
+    @include mq-min(sm) {
+        display: none;
+    }
+}
+
+// --------------------------
+// dlisplay block
+// --------------------------
+.c-block-pc{
+    display: none;
+    @include mq-min(sm) {
+        display: block;
+    }
+}
+.c-block-sp{
+    display: block;
+    @include mq-min(sm) {
+        display: none;
+    }
+}

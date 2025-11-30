@@ -1,0 +1,77 @@
+@charset "UTF-8";
+/*----------------------------------
+
+ START media-queries.scss
+
+----------------------------------*/
+
+// =======================================
+// メディアクエリ
+// =======================================
+
+/* ブレイクポイントと連動している container の幅になる。 */
+$contents-width-xxs: 320px !default;
+$contents-width-xs: 375px !default;
+$contents-width-xsm: 550px !default;
+$contents-width-sm: 768px !default;
+$contents-width-md: 960px !default;
+$contents-width-lg: 1140px !default;
+$contents-width-xl: 1300px !default;
+$contents-width-xxl: 1600px !default;
+
+$contents-width-max-xxs: $contents-width-xxs - 1px !default;
+$contents-width-max-xs: $contents-width-xs - 1px !default;
+$contents-width-max-xsm: $contents-width-xsm - 1px !default;
+$contents-width-max-sm: $contents-width-sm - 1px !default;
+$contents-width-max-md: $contents-width-md - 1px !default;
+$contents-width-max-lg: $contents-width-lg - 1px !default;
+$contents-width-max-xl: $contents-width-xl - 1px !default;
+$contents-width-max-xxl: $contents-width-xxl - 1px !default;
+
+
+// =======================================
+// メディアクエリ 切り替え処理のため編集しない
+// =======================================
+
+$map-breakpoint-min: (
+  'xxs': 'screen and (min-width: #{$contents-width-xxs})',
+  'xs': 'screen and (min-width: #{$contents-width-xs})',
+  'xsm': 'screen and (min-width: #{$contents-width-xsm})',  
+  'sm': 'screen and (min-width: #{$contents-width-sm})',
+  'md': 'screen and (min-width: #{$contents-width-md})',
+  'lg': 'screen and (min-width: #{$contents-width-lg})',
+  'xl': 'screen and (min-width: #{$contents-width-xl})',
+  'xxl': 'screen and (min-width: #{$contents-width-xxl})',
+  ) ;
+
+$map-breakpoint-max: (
+  'xxs': 'screen and (max-width: #{$contents-width-xxs})',
+	'xs': 'screen and (max-width: #{$contents-width-max-xs})',
+  'xsm': 'screen and (max-width: #{$contents-width-max-xsm})',
+  'sm': 'screen and (max-width: #{$contents-width-max-sm})',
+  'md': 'screen and (max-width: #{$contents-width-max-md})',
+  'lg': 'screen and (max-width: #{$contents-width-max-lg})',
+  'xl': 'screen and (max-width: #{$contents-width-max-xl})',
+  'xxl': 'screen and (max-width: #{$contents-width-max-xxl})',
+) ;
+
+
+@mixin mq-min($breakpoint: md) {
+  @media #{map-get($map-breakpoint-min, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq-max($breakpoint: md) {
+  @media #{map-get($map-breakpoint-max, $breakpoint)} {
+    @content;
+  }
+}
+
+
+/*----------------------------------
+
+ END media-queries.scss
+
+----------------------------------*/
+
